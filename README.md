@@ -8,6 +8,10 @@ Customer churn is an important business problem for subscription-based services.
 
 This project uses the IBM Telco Customer Churn dataset to build and evaluate machine learning models and serve predictions through a web interface.
 
+## Dashboard Preview
+
+![Customer Churn Prediction Dashboard](screenshots/dashboard.png)
+
 ## Features
 
 - Customer churn prediction using a trained machine learning pipeline
