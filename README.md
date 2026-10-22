@@ -58,8 +58,6 @@ These results are from the model evaluated at the default 0.50 threshold. The ap
 ```text
 customer-churn-prediction/
 ├── app.py
-├── data/
-│   └── Telco-Customer-Churn.csv
 ├── models/
 │   ├── churn_model.pkl
 │   └── churn_threshold.pkl
@@ -70,15 +68,13 @@ customer-churn-prediction/
 │   ├── train_model.py
 │   └── predict.py
 ├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
+│   └── css/
+│       └── style.css
 ├── templates/
-│   ├── base.html
-│   ├── dashboard.html
-│   └── predict.html
+│   └── dashboard.html
 ├── tests/
 │   └── test_model.py
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
@@ -130,9 +126,15 @@ The tests check model loading, prediction output, dashboard availability, missin
 
 ## Dataset
 
-The project uses the IBM Telco Customer Churn dataset. The dataset contains customer account information, services, contract details, charges, and churn labels.
+## Dataset
 
-Ensure you have the dataset in the `data/` directory before running the application.
+This project uses the IBM Telco Customer Churn dataset for exploratory data analysis, model training, and evaluation.
+
+The original CSV is not included in this repository. The Flask application uses the saved model and threshold files in the `models/` directory and displays dashboard statistics from the original dataset.
+
+To reproduce the training workflow or rerun the notebook, obtain the dataset from its original source and place it at `data/Telco-Customer-Churn.csv` before running the relevant preprocessing and training scripts.
+
+**Note:** The dashboard's displayed customer counts and churn statistics are fixed values from the original dataset; they are not recalculated from live customer data.
 
 ## Limitations
 
